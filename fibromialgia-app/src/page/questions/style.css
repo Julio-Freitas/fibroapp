@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 250px;
+}
+
+.button {
+    cursor: pointer;
+    border: 2px solid #9ba09b;
+    padding: 8px 20px;
+    font-size: 24px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #212121;
+    border: 2px solid #212121;
+    transition: all 0.5s;
+}
+
+.steps-progress {
+    display: flex;
+    gap: 10px;
+    max-width: 600px;
+    width: 100%;
+    position: absolute;
+    top: 25px;
+}
+
+.steps {
+    background-color: #fff;
+    flex: 1 1 20px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.full {
+    background-color: #4caf;
+    transition: all 0.5s ease-in-out;
+}
+
+.result {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 50px;
+    max-width: 700px;
+}

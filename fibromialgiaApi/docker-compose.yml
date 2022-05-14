@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  fibromialgia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fibromialgiaApi
+    ports:
+     - 9090:9090
+    volumes:
+      - .:/fibromialgia
+    networks:
+      - api-fibromialgia
+    depends_on:
+      - database
+
+  database:
+    image: mariadb
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: ${DATABASE}
+      MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+    ports:
+      - '${DATABASE_PORT}:3306'
+    volumes:
+      - ../fibromialgiaApi/mysql:/var/lib/mysql
+    container_name: database
+    networks:
+      - api-fibromialgia
+
+
+  front:
+    build:
+      context: ../fibromialgia-app
+      dockerfile: ../fibromialgia-app/dockerfile
+    image: frontend
+    ports:
+    - 3001:3000
+    container_name: frontend_app
+    volumes:
+     - .:/frontend_app
+    networks:
+      - api-fibromialgia
+    depends_on:
+      - fibromialgia
+
+
+
+networks:
+  api-fibromialgia:
+    driver: bridge
