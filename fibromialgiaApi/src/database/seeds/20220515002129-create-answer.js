@@ -94,7 +94,7 @@ module.exports = {
 
       {
         answer: "Sem alteração ou isso não acontece comigo",
-        question_id: 3,
+        question_id: 4,
         score: 0,
         created_at: new Date(),
         updated_at: new Date(),
