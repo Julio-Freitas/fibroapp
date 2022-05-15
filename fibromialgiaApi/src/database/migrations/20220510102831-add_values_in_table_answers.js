@@ -7,4 +7,6 @@ module.exports = {
       defaultValue: 0,
     });
   },
+
+  down: (queryInterface) => queryInterface.dropTable("answers"),
 };
