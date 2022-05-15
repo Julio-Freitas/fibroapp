@@ -30,6 +30,7 @@ A aplicação foi desenvolvida em duas partes, front-end e back-end
       - yarn dev:up
       - Com outro terminal aberto, na pasta de fibromialgiaApp rode no terminal
          - `npx sequelize db:migrate`
+         - `npx sequelize db:seed:all`
       - Acesse a aplicação http://localhost:3001
       - Caso não aparece as mensagens, será necessário cadastrá-las no banco utilizando o isomina 
       - abra o terminal na pasta doc_api e rode o seguinte comando `npx server`
