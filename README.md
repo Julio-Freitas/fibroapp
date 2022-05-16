@@ -2,7 +2,7 @@
 A aplicação foi desenvolvida em duas partes, front-end e back-end
 
  ### Tec: Back-End
-  - dokcer
+  - docker
   - express
   - sequelize
   - mariadb
