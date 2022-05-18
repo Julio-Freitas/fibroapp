@@ -25,6 +25,8 @@ A aplicação foi desenvolvida em duas partes, front-end e back-end
    ## Antes de rodar os comandos
    - abra o terminal na pasta do fibromialgia-app e rode o seuinte comando (npm install ou yarn ), caso não tenha yarn  isntalado  rode `npm install --global yarn`
    - Abra o terminal na pasta fibromialgiaApp e faça `npm install ou yarn `
+     - senão tiver o yarn, vistie https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable
+   - no arquivo, dentro ./fibromialgiaApi  .env substiruir o DATABASE_HOST para o enderço o ipv4 da sua máquina
    
    - Para rodar o projeto, abra o terminal na pasta fibromialgiaApp e rode os seguintes comandos
       - yarn dev:up
