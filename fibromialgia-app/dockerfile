@@ -1,8 +1,17 @@
-FROM node:latest
+FROM node:14 as build
 WORKDIR /fibromialgia-app
+
 ENV port=3001
-COPY package.json .
-RUN npm install
-COPY . .
-CMD npm start
+
+COPY package*.json ./
+
+RUN npm install -g npm@8.10.0 && npm install -g typescript && npm install
+
+COPY . ./
+
+RUN pwd
+RUN ls
+
 EXPOSE $PORT
+
+CMD npm start
