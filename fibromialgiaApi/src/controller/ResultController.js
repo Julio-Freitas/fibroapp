@@ -53,7 +53,7 @@ class ResultController {
   }
 
   static feedbackResult(score) {
-    if (score >= 0 && score <= 7) return TEXTSRESULT.median(score);
+    if (score >= 0 && score <= 7) return TEXTSRESULT.negative(score);
 
     if (score > 7 && score < 13) {
       return TEXTSRESULT.median(score);
